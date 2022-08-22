@@ -1,0 +1,33 @@
+In this chapter you’ll learn to test your code using tools in Python’s
+unittest module.
+
+Importing the unittest package by:
+"import unittest"
+"""Package unittest"""
+Python unit testing framework, based on Erich Gamma's JUnit and Kent Beck's Smalltalk testing framework (used with permission).
+This module contains the core framework classes that form the basis of specific test cases and suites (TestCase, TestSuite etc.), and also a text-based utility class for running the tests and reporting the results
+ (TextTestRunner).
+Simple usage:
+
+import unittest
+class IntegerArithmeticTestCase(unittest.TestCase):
+def testAdd(self): # test method names begin with 'test'
+self.assertEqual((1 + 2), 3) self.assertEqual(0 + 1, 1)
+def testMultiply(self):
+self.assertEqual((0 * 10), 0) self.assertEqual((5 * 8), 40)
+if __name__ == '__main__':
+unittest.main()
+Further information is available in the bundled documentation, and from
+ http://docs.python.org/library/unittest.html
+ 
+ 
+- Please refer to [unittest.case] [class TestCase] - `TestCase` on docs.python.org
+
+
+---Page 254 --------
+assertEqual(a, b) Verify that a == b
+assertNotEqual(a, b) Verify that a != b
+assertTrue(x) Verify that x is True
+assertFalse(x) Verify that x is False
+assertIn(item, list) Verify that item is in list
+assertNotIn(item, list) Verify that item is not in list
