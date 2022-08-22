@@ -1,0 +1,69 @@
+"""
+JSON files
+
+
+
+"""
+"""
+# with open('text_files/filename.txt') as file_object:
+"""
+"""
+Windows systems use a backslash (\) instead of a forward slash (/) when displaying
+file paths, but you can still use forward slashes in your code.
+"""
+
+"""
+Using absolute paths, you can read files from any location on your system. For now it’s easiest to store files in the same directory as your program
+files or in a folder such as text_files within the directory that stores your program files.
+N ote If you try to use backslashes in a file path, you’ll get an error because the backslash is
+used to escape characters in strings. For example, in the path "C:\path\to\file.txt",
+the sequence \t is interpreted as a tab. If you need to use backslashes, you can escape
+each one in the path, like this: "C:\\path\\to\\file.txt"
+"""
+
+page 
+ When Python reads from a text file, it interprets all text in the file as a string. If you
+read in a number and want to work with that value in a numerical context, you’ll
+have to convert it to an integer using the int() function or convert it to a float using
+the float() function.
+
+page 229
+The call to open() in this example has two arguments u. The first argument is still the name of the file we want to open. The second argument, 'w',
+tells Python that we want to open the file in write mode. You can open a file
+192 Chapter 10
+in read mode ('r'), write mode ('w'), append mode ('a'), or a mode that allows
+you to read and write to the file ('r+'). If you omit the mode argument,
+Python opens the file in read-only mode by default.
+The open() function automatically creates the file you’re writing to if
+it doesn’t already exist. However, be careful opening a file in write mode
+('w') because if the file does exist, Python will erase the contents of the file
+before returning the file object.
+At v we use the write() method on the file object to write a string to
+the file. This program has no terminal output, but if you open the file
+programming.txt, you’ll see one line:
+programming.txt I love programming
+
+# Using try-except Blocks page 232
+When you think an error may occur, you can write a try-except block to
+handle the exception that might be raised. You tell Python to try running
+some code, and you tell it what to do if the code results in a particular kind
+of exception.
+Here’s what a try-except block for handling the ZeroDivisionError exception looks like:
+try:
+ print(5/0)
+except ZeroDivisionError:
+ print("You can't divide by zero!")
+
+ # page 236
+
+
+----------------x------------------
+    Page 244
+    REFACTORING
+Often, you’ll come to a point where your code will work, but you’ll recognize that you could improve the code by
+breaking it up into a series of functions that have specific jobs. This process is called refactoring. Refactoring
+makes your code cleaner, easier to understand, and easier to extend.
+We can refactor remember_me.py by moving the bulk of its logic into one
+or more functions. The focus of remember_me.py is on greeting the user, so
+let’s move all of our existing code into a function called greet_user()
+--------------
