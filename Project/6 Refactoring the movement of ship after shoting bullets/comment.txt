@@ -1,0 +1,2 @@
+the ship was not moving here
+I do not know if it is a bug or not
