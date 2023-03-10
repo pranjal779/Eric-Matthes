@@ -1,0 +1,29 @@
+# page 326 or 364
+
+To make a histogram, we need a bar for each of the possible results. 
+We store these in a list called x_values, which starts at 1 and ends at the 
+number of sides on the die. Plotly doesn’t accept the results of the range()
+function directly, so we need to convert the range to a list explicitly using
+the list() function. The Plotly class Bar() represents a data set that will be 
+formatted as a bar chart . This class needs a list of x-values, and a list of 
+y-values. The class must be wrapped in square brackets, because a data set 
+can have multiple elements.
+Each axis can be configured in a number of ways, and each configuration option 
+is stored as an entry in a dictionary. At this point, we’re just 
+setting the title of each axis. The Layout() class returns an object that 
+specifies the layout and configuration of the graph as a whole. Here we 
+set the title of the graph and pass the x- and y-axis configuration dictionaries as well.
+To generate the plot, we call the offline.plot() function. 
+This function needs a dictionary containing the data and layout objects, and it also 
+accepts a name for the file where the graph will be saved. 
+We store the output in a file called d6.html.
+When you run the program die_visual.py, a browser will probably open 
+showing the file d6.html. If this doesn’t happen automatically, open a new 
+tab in any web browser, and then open the file d6.html (in the folder where 
+you saved die_visual.py). You should see a chart.
+
+Notice that Plotly has made the chart interactive: hover your cursor 
+over any bar in the chart, and you’ll see the associated data. This feature 
+is particularly useful when you’re plotting multiple data sets on the same 
+chart. Also notice the icons in the upper right, which allow you to pan and 
+zoom the visualization, and save your visualization as an image.

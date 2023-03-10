@@ -1,0 +1,14 @@
+Page 353
+
+"""
+x_values = range(1, 6)
+y_values = [x**3 for x in x_values]
+
+x2_values = range(1, 5001)
+y2_values = [x**3 for x in x2_values]
+"""
+
+15-2 Colored Cubes.py:8: MatplotlibDeprecationWarning: The seaborn styles shipped by seaborn. However, they will remain available as 'seaborn-v0_8-<style>'. Alternatively, directly use the seaborn API instead.
+  plt.style.use('seaborn')
+
+  Random walks #pg 353

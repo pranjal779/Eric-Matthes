@@ -1,0 +1,20 @@
+# page 367 or 3328
+
+After creating two instances of Die, we roll the dice and calculate 
+the sum of the two dice for each roll. The largest possible result (12) 
+is the sum of the largest number on both dice, which we store in max_result . 
+The smallest possible result (2) is the sum of the smallest number on both 
+dice. When we analyze the results, we count the number of results for each 
+value between 2 and max_result. (We could have used range(2, 13), but 
+this would work only for two D6 dice. When modeling real-world situations, 
+it’s best to write code that can easily model a variety of situations. This code 
+allows us to simulate rolling a pair of dice with any number of sides.)
+When creating the chart, we include the dtick key in the x_axis_config
+dictionary. This setting controls the spacing between tick marks on 
+the x-axis. Now that we have more bars on the histogram, Plotly’s default 
+
+
+settings will only label some of the bars. The 'dtick': 1 setting tells Plotly to 
+label every tick mark. We also update the title of the chart and change the 
+output filename as well.
+After running this code, you should see a chart
